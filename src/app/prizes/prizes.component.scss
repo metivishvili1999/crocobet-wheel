@@ -1,0 +1,43 @@
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+li {
+  width: 200px;
+  height: 80px;
+  opacity: 0.3;
+  margin-bottom: 5px;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  &.winned {
+      opacity: 1;
+  }
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  &.house{
+      background-image: url('../../assets/images/house.png');
+  }
+  &.gtr{
+      background-image: url('../../assets/images/gtr.png');
+  }
+  &.scooter{
+      background-image: url('../../assets/images/scooter.png');
+  }
+  &.pixel{
+      background-image: url('../../assets/images/pixel.png');
+  }
+}

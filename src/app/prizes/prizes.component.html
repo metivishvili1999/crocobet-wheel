@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let prize of prizeList" [@testAnimation]="getAnimationState(prize)">
+        <span *ngIf="prize.prizetype == 'text'"> {{ prize.text }} </span>
+        <div *ngIf="prize.prizetype != 'text'" class="icon" [ngClass]="prize.iconName"></div>
+    </li>
+</ul>

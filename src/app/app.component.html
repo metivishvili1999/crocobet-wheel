@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="cont">
+    <div class="row">
+      <div class="input">
+          <label for="select"> Choose prize to win </label>
+          <select name="select" id="select" [(ngModel)]="selectedPrize" (change)="selectPrize($event)">
+              <option value="random"> RANDOM </option>
+              <option *ngFor="let prize of prizes" [value]="prize.id"> {{ prize.text ? prize.text : prize.iconName | uppercase }} </option>
+          </select>
+      </div>
+        <app-wheel [prizes]="prizes" [destination]="selectedPrize" (prizeWon)="prizeWon($event)"></app-wheel>
+  </div>
+  <div class="row">
+      <app-prizes [prizeWon]="prizeWinned" [prizes]="prizes"></app-prizes>
+  </div>
+  </div>
+</div>
